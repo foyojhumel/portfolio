@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Ensures browser correctly interpret the characters -->
+    <meta charset="UTF-8">
+    <!-- For responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhumel's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header, Navigation bar -->
+    <header id="navbar">
+        <div class="navbar-content">
+            <a href="#" class="logo-link">
+                <div class="logo-box">Jun</div>
+                <div class="logo-text">
+                    <h1 id="nav-name">Jhumel A. Foyo</h1>
+                    <p id="nav-title">Embedded Systems Engineer</p>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#about">About Me</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <!-- For three horizontal lines or hamburger icon, used for containing links in small view. -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <!-- Closes mobile menu after clicking a link. -->
+        <a href="#about" onclick="closeMobileMenu()">About Me</a>
+        <a href="#hobbies" onclick="closeMobileMenu()">Hobbies</a>
+        <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
+
+    <article>
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>ABOUT ME</h2>
+                    <h1>Hi, I'm <span id="profile-first-name">Jhumel</span>.</h1>
+                    <p class="subtitle" id="profile-title-display">Embedded Systems Engineer & Aspiring AI Engineer</p>
+                    <p class="description" id="profile-about">Hello! I'm a lifelong learner passionate about creating
+                        innovative projects. I thrive on excitement of tackling challenges and discovering solutions
+                        to complex computer science problems.</p>
+                    <button id="fact-btn" class="fact-btn">
+                        <span>Show Fun Fact</span>
+                    </button>
+                    <div id="fun-fact-container" class="fact-container">
+                        <div class="fact-content">
+                            <p id="profile-fun-fact"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-image-container">
+                    <div class="profile-image-wrapper">
+                        <img id="profile-avatar" src="images/foyoJhumel1.jpg" alt="My picture" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Let's waddle through my <span>leisure.</span></h2>
+                    <p>My life away from coding.</p>
+                </div>
+                <div id="hobbies-grid" class="hobbies-grid">
+                    <!-- Inside this div is where hobbies will be loaded from the script. -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Let's create something <span>together.</span></h2>
+                <p>I'm open to collaborations, building connections, or even just a friendly hello.</p>
+                <div id="contact-list" class="contact-list">
+                    <!-- Inside this div is where contacts will be loaded from the script. -->
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <footer>
+        <p>© 2026 Jhumel. Bear with ME, WebDev Newbie 💻</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
